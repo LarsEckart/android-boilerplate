@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply from: '../config/quality/quality.gradle'
 apply plugin: 'com.github.triplet.play'
 //TODO uncomment line below after adding fabric api secret and key to fabric.properties
@@ -106,6 +107,8 @@ dependencies {
   def jUnit = "junit:junit:4.12"
   def mockito = "org.mockito:mockito-core:$MOCKITO_VERSION"
 
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
   // App Dependencies
   implementation "com.google.android.gms:play-services-gcm:$PLAY_SERVICES_VERSION"
   implementation "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
@@ -168,6 +171,7 @@ dependencies {
   testImplementation "org.hamcrest:hamcrest-library:$HAMCREST_VERSION"
   testImplementation "org.hamcrest:hamcrest-integration:$HAMCREST_VERSION"
   testImplementation 'org.robolectric:robolectric:3.5.1'
+
 }
 
 // Log out test results to console

@@ -23,6 +23,7 @@ import uk.co.ribot.androidboilerplate.util.RxUtil;
 public class SyncService extends Service {
 
     @Inject DataManager mDataManager;
+
     private Disposable mDisposable;
 
     public static Intent getStartIntent(Context context) {
